@@ -1,0 +1,12 @@
+@keyframes pulse-check {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+}
+
+.check-animate {
+  animation: pulse-check 0.4s ease-in-out;
+}
