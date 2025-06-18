@@ -10,3 +10,20 @@
 .check-animate {
   animation: pulse-check 0.4s ease-in-out;
 }
+@keyframes pop-up {
+  0% {
+    transform: scale(0.8) translateY(10px);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.05) translateY(-4px);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-pop-up {
+  animation: pop-up 0.4s ease-out;
+}
