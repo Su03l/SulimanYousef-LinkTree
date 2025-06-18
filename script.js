@@ -25,12 +25,12 @@ const links = [
   },
   {
     id: "cv",
-    title: " CV",
+    title: "CV",
     url: "SULIMANYOUSEF.pdf",
     icon: "file-text",
   },
   {
-    id: "Personal Profile",
+    id: "profile",
     title: "Personal Profile",
     url: "https://sulimanyusef.vercel.app/",
     icon: "user",
@@ -44,9 +44,7 @@ function buildLinkCard({ id, title, url, icon }) {
 
   const btn = document.createElement("button");
   btn.className = "w-full p-4 flex items-center space-x-4 text-left";
-  btn.onclick = () => {
-    window.open(url, "_blank");
-  };
+  btn.onclick = () => window.open(url, "_blank");
 
   const iconWrap = document.createElement("div");
   iconWrap.className = `p-3 rounded-xl transition-all duration-300 group-hover:scale-110 
@@ -74,13 +72,18 @@ function buildLinkCard({ id, title, url, icon }) {
 
       // Show Copied Message
       const copiedMessage = document.createElement("div");
-      copiedMessage.textContent = "Copied!";
-      copiedMessage.className =
-        "absolute bottom-[-28px] left-1/2 -translate-x-1/2 text-sm px-2 py-1 bg-black text-white rounded shadow-md transition-opacity duration-300 opacity-0";
+      copiedMessage.textContent = "✅ Copied to clipboard!";
+      copiedMessage.className = `
+        absolute bottom-[-60px] left-1/2 -translate-x-1/2 
+        text-white text-sm font-semibold px-4 py-2 
+        bg-black rounded-xl shadow-2xl opacity-0 
+        transform scale-95 transition-all duration-300 
+        border border-white 
+        animate-pop-up z-50
+      `;
       card.appendChild(copiedMessage);
-      setTimeout(() => {
-        copiedMessage.classList.add("opacity-100");
-      }, 50);
+
+      setTimeout(() => copiedMessage.classList.add("opacity-100", "scale-100"), 50);
       setTimeout(() => {
         copiedMessage.classList.remove("opacity-100");
         setTimeout(() => copiedMessage.remove(), 300);
