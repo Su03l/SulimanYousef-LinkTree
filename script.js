@@ -32,7 +32,7 @@ const links = [
   {
     id: "Personal Profile",
     title: "Personal Profile",
-    url: "https://sulimanyousef.vercel.app/",
+    url: "https://sulimanyusef.vercel.app/",
     icon: "user",
   },
 ];
