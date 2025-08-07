@@ -32,7 +32,7 @@ const links = [
   {
     id: "profile",
     title: "Personal Profile",
-    url: "https://sulimanyusef.vercel.app/",
+    url: "https://suliamanyousef.vercel.app/",
     icon: "user",
   },
 ];
@@ -112,3 +112,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
   lucide.createIcons();
 });
+
