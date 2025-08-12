@@ -1,3 +1,10 @@
+/* Base reset and global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -6,140 +13,280 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    line-height: 1.5;
 }
 
+/* Profile image */
 .img {
     margin-top: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .img img {
     width: 160px;
     height: 160px;
     object-fit: cover;
     border-radius: 50%;
     border: 4px solid #fff;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
 }
 
+.img img:hover {
+    transform: scale(1.05);
+}
+
+/* Heading and bio */
 h1 {
     font-size: 2.2rem;
     color: #fff;
     margin-top: 20px;
     text-align: center;
-    font-weight: bold;
-}
-p {
-    font-size: 1.1rem;
-    color: #fff;
-    text-align: center;
-    margin-top: 10px;
+    font-weight: 700;
 }
 
+p {
+    font-size: 1.1rem;
+    color: #ddd;
+    text-align: center;
+    margin-top: 10px;
+    padding: 0 20px;
+    opacity: 0.9;
+}
+
+/* Links container */
 .links {
     margin: 30px auto 0 auto;
     max-width: 400px;
+    width: 100%;
+    padding: 0 20px;
     display: flex;
     flex-direction: column;
-    gap: 18px;
-    width: 100%;
+    gap: 16px;
 }
 
+/* Link box (each button) */
 .link-box {
-    width: 100%;
-    padding: 16px;
     display: flex;
     align-items: center;
     gap: 16px;
-    background: #2a2a2a;
+    background: #333;
     border-radius: 14px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-    transition: box-shadow 0.2s, background 0.2s;
-    cursor: pointer;
-    text-align: left;
+    padding: 16px;
+    color: #fff;
     text-decoration: none;
-    color: #fff;
-    border: 3px solid #1a1a1a;
-    position: relative;
-}
-.link-box:hover {
-    box-shadow: 0 4px 16px rgba(0,0,0,0.13);
-    background: #222;
-}
-.icon-left {
-    display: flex;
-    align-items: center;
-}
-.link-text {
-    flex: 1;
-    font-size: 1.1rem;
-    color: #fff;
-    text-align: left;
-}
-.icon-copy {
-    margin-left: 14px;
-    color: #fff;
+    transition: all 0.2s ease;
+    border: 1px solid #444;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    transition: color 0.2s;
-    z-index: 2;
 }
-.icon-copy:hover {
-    color: #fff;
+
+.link-box:hover {
+    background: #444;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
 }
-.icon-bg {
-    border: 2px solid #fff;
-    padding: 4px;
-    border-radius: 12px;
-    /* background: #1a1a1a;
-    color: #fff;
-    border-radius: 12px;
-    padding: 0.6rem;
+
+.link-box:active {
+    transform: translateY(0);
+}
+
+/* Icon container */
+.icon-left {
+    flex-shrink: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: background 0.2s, color 0.2s, transform 0.2s;
-    border: 2px solid #fff; */
 }
-/* .icon-bg svg {
-    display: block;
-    width: 24px;
-    height: 24px;
-    stroke: currentColor;
-    color: #fff;
-} */
 
-/* Toast styles */
+.icon-bg {
+    /* width: 40px;
+    height: 40px;
+    background: #1a1a1a;
+    border: 2px solid #fff;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+
+.icon-bg svg {
+    width: 22px;
+    height: 22px;
+    stroke: #fff;
+    fill: none;
+}
+
+/* Link text */
+.link-text {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #fff;
+    flex: 1;
+    text-align: left;
+}
+
+/* Copy icon */
+.icon-copy {
+    color: #bbb;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: all 0.2s;
+    margin-left: 8px;
+}
+
+.icon-copy:hover {
+    color: #fff;
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+/* Toast notification */
 .custom-toast {
     position: fixed;
-    top: 32px;
+    top: 20px;
     left: 50%;
     transform: translateX(-50%);
-    background: #222;
+    background: #333;
     color: #fff;
-    padding: 14px 32px;
+    padding: 14px 30px;
     border-radius: 8px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.13);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
     font-size: 1rem;
     z-index: 9999;
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.3s;
-    display: block;
+    transition: opacity 0.3s ease;
+    white-space: nowrap;
 }
+
 .custom-toast.show {
     opacity: 1;
     pointer-events: auto;
 }
 
+/* Footer */
 footer {
     margin-top: auto;
     text-align: center;
-    padding: 24px 0 12px 0;
-    color: #fff;
-    font-size: 1rem;
+    padding: 24px 0 12px;
+    color: #aaa;
+    font-size: 0.95rem;
     letter-spacing: 0.5px;
-    background: none;
+}
+
+/* ------------------------------
+   MOBILE RESPONSIVE STYLES
+   ------------------------------ */
+
+/* Tablets and below (max-width: 768px) */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8rem;
+        margin-top: 16px;
+    }
+
+    p {
+        font-size: 1rem;
+        padding: 0 16px;
+    }
+
+    .img img {
+        width: 140px;
+        height: 140px;
+    }
+
+    .links {
+        gap: 14px;
+        padding: 0 16px;
+    }
+
+    .link-box {
+        padding: 14px;
+        gap: 14px;
+    }
+
+    .icon-bg {
+        width: 36px;
+        height: 36px;
+    }
+
+    .icon-bg svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .link-text {
+        font-size: 1.05rem;
+    }
+}
+
+/* Small phones (max-width: 480px) */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.6rem;
+        margin-top: 14px;
+    }
+
+    p {
+        font-size: 0.95rem;
+        padding: 0 12px;
+    }
+
+    .img {
+        margin-top: 24px;
+    }
+
+    .img img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .links {
+        margin-top: 20px;
+        gap: 12px;
+    }
+
+    .link-box {
+        padding: 12px;
+        gap: 10px;
+        border-radius: 12px;
+    }
+
+    .icon-bg {
+        width: 34px;
+        height: 34px;
+        border-width: 1.5px;
+    }
+
+    .icon-bg svg {
+        width: 18px;
+        height: 18px;
+    }
+
+    .link-text {
+        font-size: 0.95rem;
+    }
+
+    .icon-copy {
+        margin-left: 6px;
+        opacity: 0.6;
+    }
+
+    footer {
+        padding: 16px 0 8px;
+        font-size: 0.85rem;
+        color: #999;
+    }
+
+    .custom-toast {
+        font-size: 0.9rem;
+        padding: 12px 20px;
+        max-width: 90%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
 }
