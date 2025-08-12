@@ -1,41 +1,93 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Suliman Yousef – Links</title>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suliaman Yousef - LinkTree</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="img">
+        <img src="avatar.jpg" alt="Suliman Yousef">
+    </div>
+    <h1>SULIMAN YOUSEF</h1>
+    <p>Software Engineering - Web Developer</p>
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <div class="links">
+    <!-- WhatsApp -->
+    <a href="https://wa.me/966500000000" target="_blank" class="link-box">
+        <span class="icon-left icon-bg">
+            <!-- WhatsApp SVG -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"></path></svg>
+        </span>
+        <span class="link-text">WhatsApp</span>
+        <span class="icon-copy" onclick="event.preventDefault(); event.stopPropagation(); copyToClipboard('https://wa.me/966590128804')">
+            <!-- Copy SVG -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
+        </span>
+    </a>
+    <!-- Twitter/X -->
+    <a href="https://twitter.com/Su05l" target="_blank" class="link-box">
+        <span class="icon-left icon-bg">
+            <!-- X (Twitter) SVG -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
+        </span>
+        <span class="link-text">Twitter / X</span>
+        <span class="icon-copy" onclick="event.preventDefault(); event.stopPropagation(); copyToClipboard('https://twitter.com/Su05l')">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
+        </span>
+    </a>
+    <!-- GitHub -->
+    <a href="https://github.com/Su03l" target="_blank" class="link-box">
+        <span class="icon-left icon-bg">
+            <!-- GitHub SVG -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path><path d="M9 18c-4.51 2-5-2-7-2"></path></svg>
+        </span>
+        <span class="link-text">GitHub</span>
+        <span class="icon-copy" onclick="event.preventDefault(); event.stopPropagation(); copyToClipboard('https://github.com/Su03l')">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
+        </span>
+    </a>
+    <!-- LinkedIn -->
+    <a href="https://www.linkedin.com/in/suliaman-yousef-36265a320" target="_blank" class="link-box">
+        <span class="icon-left icon-bg">
+            <!-- LinkedIn SVG -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+        </span>
+        <span class="link-text">LinkedIn</span>
+        <span class="icon-copy" onclick="event.preventDefault(); event.stopPropagation(); copyToClipboard('https://www.linkedin.com/in/suliaman-yousef-36265a320')">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
+        </span>
+    </a>
+    <!-- CV -->
+    <a href="SULIMANYOUSEF.pdf" target="_blank" class="link-box">
+        <span class="icon-left icon-bg">
+            <!-- CV SVG -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"></path><path d="M14 2v4a2 2 0 0 0 2 2h4"></path><path d="M10 9H8"></path><path d="M16 13H8"></path><path d="M16 17H8"></path></svg>
+        </span>
+        <span class="link-text">CV</span>
+        <span class="icon-copy" onclick="event.preventDefault(); event.stopPropagation(); copyToClipboard('SULIMANYOUSEF.pdf')">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
+        </span>
+    </a>
+    <!-- Personal Profile -->
+    <a href="https://suliamanyousef.vercel.app/" target="_blank" class="link-box">
+        <span class="icon-left icon-bg">
+            <!-- Profile SVG -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+        </span>
+        <span class="link-text">Personal Profile</span>
+        <span class="icon-copy" onclick="event.preventDefault(); event.stopPropagation(); copyToClipboard('https://suliamanyousef.vercel.app/')">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"></rect><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"></path></svg>
+        </span>
+    </a>
+</div>
 
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <div id="custom-toast" class="custom-toast"></div>
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body class="min-h-screen bg-white text-black transition-all duration-500">
-    <!-- Main Content -->
-    <main class="container mx-auto px-4 py-12 flex flex-col items-center justify-center">
-      <!-- Avatar -->
-      <div class="w-32 h-32 mb-6 rounded-full border-4 overflow-hidden border-black">
-        <img src="avatar.jpg" alt="Avatar" class="w-full h-full object-cover" />
-      </div>
-
-      <!-- Name & Subtitle -->
-      <h1 class="text-4xl md:text-5xl font-bold mb-2">SULIMAN YOUSEF</h1>
-      <p class="text-lg text-gray-600 mb-12">Software engineering | web development | CS</p>
-
-      <!-- Links -->
-      <section id="links" class="w-full max-w-md space-y-4"></section>
-
-      <!-- Footer -->
-      <footer class="mt-16 text-center">
-        <p class="text-sm text-gray-500">© Suliman Yousef | All Rights Reserved</p>
-      </footer>
-    </main>
-
+    <footer>
+        &copy; Suliman Yousef | All Rights Reserved
+    </footer>
     <script src="script.js"></script>
-  </body>
+</body>
 </html>
-
